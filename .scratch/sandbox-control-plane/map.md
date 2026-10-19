@@ -20,6 +20,7 @@ A build / don't-build decision, and if "build", a v1 spec ready to hand off for 
   - Egress: static policy editable from phone **and** live egress requests (allow/deny).
   - Remote-first over Tailscale; tailnet identity is the auth for v1; PWA for phone.
   - One host in v1; data model must allow more hosts later.
+- GPU not required for v1 (owner, 2026-10-20). Driving a fast-changing CLI/SDK backend is acceptable.
 - Docker Sandboxes pain points (the wedge): no UI for sizing/creating sandboxes; creating many is a hassle; egress allow/deny only from shell; resize requires recreating.
 - Market context: `research/market-survey.md` (Oct 2026). Gap is real but narrow; don't build an agent UI.
 - Standing preference: concise answers.
@@ -39,7 +40,6 @@ A build / don't-build decision, and if "build", a v1 spec ready to hand off for 
 - **How agent apps connect into a sandbox**: SSH host vs ACP endpoint vs both; how Claude Desktop / Codex discover sandboxes; how the agent's own API key reaches it (probably via the same credential proxy).
 - **Snapshot / clone UX**: what snapshotting a sandbox means for its repo grant and egress policy.
 - **Preview URLs**: exposing a dev server inside a sandbox to the tailnet.
-- **GPU passthrough**: whether v1 sandboxes can use the host's GPU for local models.
 - **Host lifecycle**: idle sleep / wake, what happens to sandboxes on host reboot.
 - **Audit log**: what the owner can see of a sandbox's egress and repo activity after the fact.
 - **Packaging**: single binary vs compose; Linux-only vs also macOS hosts.
