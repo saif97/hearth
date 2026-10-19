@@ -28,6 +28,8 @@ A build / don't-build decision, and if "build", a v1 spec ready to hand off for 
 
 <!-- one line per closed ticket -->
 
+- [Docker Sandboxes: are the deal-breakers fixed or on the roadmap?](issues/01-docker-sandboxes-limits-and-roadmap.md): No. Still no live resize, no public local API or bulk create, egress approval exists but CLI-only and deny-first, no published roadmap; `sbx` is at most an optional, version-pinned adapter. Detail: [findings](../../research/docker-sandboxes-roadmap.md)
+
 ## Not yet specified
 
 - **How agent apps connect into a sandbox**: SSH host vs ACP endpoint vs both; how Claude Desktop / Codex discover sandboxes; how the agent's own API key reaches it (probably via the same credential proxy).
