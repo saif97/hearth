@@ -29,6 +29,7 @@ A build / don't-build decision, and if "build", a v1 spec ready to hand off for 
 <!-- one line per closed ticket -->
 
 - [Docker Sandboxes: are the deal-breakers fixed or on the roadmap?](issues/01-docker-sandboxes-limits-and-roadmap.md): No. Still no live resize, no public local API or bulk create, egress approval exists but CLI-only and deny-first, no published roadmap; `sbx` is at most an optional, version-pinned adapter. Detail: [findings](../../research/docker-sandboxes-roadmap.md)
+- [How can egress requests be held for live approval?](issues/03-live-egress-requests.md): Host-side proxy keyed on SNI/Host/CONNECT (DNS-map fallback), forced DNS + nftables default-drop; hold ~10–25 s then fail closed, approval applies on retry (OpenShell `/wait` pattern for slow phone taps). Accepted gaps: domain fronting, ECH, shared CDN IPs. Detail: [findings](../../research/live-egress-requests.md)
 
 ## Not yet specified
 
