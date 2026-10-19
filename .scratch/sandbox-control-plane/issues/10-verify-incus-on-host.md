@@ -12,5 +12,7 @@ On Saif's PC, confirm the facts the backend choice hangs on (HITL checklist):
 - Grow the root disk of the running VM on the current storage pool. Does it apply live, and does the guest filesystem grow?
 - Change an Incus network ACL on the running VM. Does it apply immediately?
 - Try a `native-context` GPU device on the RX 9060 XT. Does it attach, and does ROCm see it inside the VM?
+- Check that Incus anti-spoofing (`security.mac_filtering`, `security.ipv4_filtering`) applies to the VM NIC.
+- Push through a test proxy that rejects mid-upload: does git show a clean error? Do git, Node (`NODE_EXTRA_CA_CERTS`) and Python trust a CA scoped to GitHub domains?
 
 Record versions and outcomes in the answer.
